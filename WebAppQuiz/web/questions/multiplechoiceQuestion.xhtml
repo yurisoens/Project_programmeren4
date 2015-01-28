@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Multiple Choice</title>
+    </h:head>
+    <h:outputStylesheet name="css/jsfcrud.css"/>
+    <h:body>
+        <h:form>
+            Category: <h:outputText value="#{tblVraagController.selected.categorie}"/><br/>
+            Current level: <h:outputText value="#{tblUserController.selected.skillLevel}"/><br/><br/>
+            <h:outputText value="#{tblVraagController.selected.vraag}"/>
+            <h:selectOneRadio value="#{tblVraagController.gegevenAntwoord}">
+                <f:selectItem itemValue="#{tblVraagController.multipleChoiceA}" itemLabel="#{tblVraagController.multipleChoiceA}" />
+                <f:selectItem itemValue="#{tblVraagController.multipleChoiceB}" itemLabel="#{tblVraagController.multipleChoiceB}" />
+                <f:selectItem itemValue="#{tblVraagController.multipleChoiceC}" itemLabel="#{tblVraagController.multipleChoiceC}" />
+                <f:selectItem itemValue="#{tblVraagController.multipleChoiceD}" itemLabel="#{tblVraagController.multipleChoiceD}" />
+            </h:selectOneRadio>
+            Your current score: <h:outputText value="#{tblVraagController.userScore}"/><br/>
+            <h:commandButton id="btnSubmit" value="Next Question" action="#{tblVraagController.nextQuestion()}">
+            </h:commandButton> 
+            
+        </h:form>
+    </h:body>
+</html>
+

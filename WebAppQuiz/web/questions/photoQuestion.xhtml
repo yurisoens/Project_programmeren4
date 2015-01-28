@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Media Question</title>
+    </h:head>
+    <h:outputStylesheet name="css/jsfcrud.css"/>
+    <h:body>
+        <h:form>
+            Category: <h:outputText value="#{tblVraagController.selected.categorie}"/><br/>
+            Current level: <h:outputText value="#{tblUserController.selected.skillLevel}"/><br/><br/>
+            <h:outputText value="#{tblVraagController.selected.vraag}"/><br/>
+            <h:graphicImage url="/#{tblVraagController.selected.media}" width="300"/><br/>
+            <h:inputText value="#{tblVraagController.gegevenAntwoord}"/><br/>
+            Your current score: <h:outputText value="#{tblVraagController.userScore}"/><br/>
+            <h:commandButton id="btnSubmit" value="Next Question" action="#{tblVraagController.nextQuestion()}">
+            </h:commandButton> 
+            
+        </h:form>
+    </h:body>
+</html>
+

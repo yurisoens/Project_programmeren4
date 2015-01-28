@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Save User</title>
+    </h:head>
+    <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+    <h:form><br/><br/>
+            <h:panelGrid columns="2">
+            ID: <h:outputText id="id" value="#{tblUserController.selected.id}"/>   
+            First name: <h:outputText id="firstname" value="#{tblUserController.selected.firstname}"/>
+            Last name: <h:outputText id="lastname" value="#{tblUserController.selected.lastname}"/>
+            Username: <h:outputText id="username" value="#{tblUserController.selected.username}"/>
+            Password: <h:outputText id="password" value="#{tblUserController.selected.password}"/>
+            Average Score: <h:outputText id="averageScore" value="#{tblUserController.selected.averageScore}"/>
+            Skill Level: <h:outputText id="skillLevel" value="#{tblUserController.selected.skillLevel}"/>
+            
+            <h:commandButton id="btnSubmit" value="Update" action="#{tblUserController.update()}"/>
+            <h:link outcome="/index" value="Return to the home page"/>
+            </h:panelGrid>
+    </h:form>
+</html>
+
